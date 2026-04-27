@@ -1,14 +1,18 @@
-import type { NextConfig } from "next";
+import "./globals.css";
 
-const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-      },
-    ],
-  },
+export const metadata = {
+  title: "Eternal Release",
+  description: "Holistic nervous system healing",
 };
 
-export default nextConfig;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
