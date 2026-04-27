@@ -13,6 +13,10 @@ module.exports = {
         moss: "#3E4A34",
         sand: "#D4C5A9",
       },
+      fontFamily: {
+        serif: ["Playfair Display", "serif"],
+        sans: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],

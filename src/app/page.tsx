@@ -1,18 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TheRealization from "@/components/TheRealization";
+import IntroductionTeaser from "@/components/IntroductionTeaser";
 import TheScience from "@/components/TheScience";
-import PathwaysTeaser from "@/components/PathwaysTeaser";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main style={{ backgroundColor: '#FCFAF7' }}>
+    <main className="bg-bg">
       <Navbar />
       <Hero />
-      <TheRealization />
+      <IntroductionTeaser />
       <TheScience />
-      <PathwaysTeaser />
       <Footer />
     </main>
   );
