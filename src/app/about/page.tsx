@@ -7,8 +7,12 @@ export default function AboutPage() {
       <Navbar />
       <section className="pt-64 pb-32 max-w-7xl mx-auto px-8 md:px-12">
         <div className="max-w-4xl">
-           <div className="aspect-[21/9] w-full bg-sand/10 rounded-[60px] mb-20 overflow-hidden border border-sand/20 relative">
-              <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000" alt="Sanctuary" className="w-full h-full object-cover opacity-80" />
+           <div className="aspect-[21/9] w-full bg-sand/10 rounded-[60px] mb-20 overflow-hidden border border-sand/20 relative group">
+              <img 
+                src="https://customer-assets.emergentagent.com/wingman/29fab97e-3d97-4ee3-a7c2-df0f13706430/attachments/d88bb604e1054353ae9dcd0ccc20d03b_pexels-darina-belonogova-9167188.jpg" 
+                alt="Sanctuary" 
+                className="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 transition-all duration-1000"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-[#FCFAF7]/40 to-transparent" />
            </div>
            
@@ -24,7 +28,7 @@ export default function AboutPage() {
               <p>That early imprint was compounded by years of abuse, neglect, and sexual assault that followed my adoption. By my early twenties, I was a walking storm, angry, unruly, and struggling with attachment issues so extreme they terrified the professionals. I&apos;ve had therapists quit on me. I&apos;ve been called &ldquo;too much,&rdquo; &ldquo;reactive,&rdquo; and &ldquo;unstable.&rdquo; I was cycled through labels like Bipolar, BPD, and even Autism, diagnoses that tried to explain my symptoms without ever touching the fire that caused them. While labels can be helpful for some, they never helped guide me through the experience. I was stiff, tense, anxious, and reactive.</p>
 
               <div className="py-24 border-y border-[#D9D2C5]/30 my-32 text-center">
-                 <p className="font-serif italic text-black text-4xl md:text-6xl text-center leading-tight">
+                 <p className="font-serif italic text-black text-4xl md:text-6xl text-center leading-tight text-balance">
                     &ldquo;I&apos;d rather be whole than good.&rdquo; — Carl Jung
                  </p>
               </div>
@@ -33,19 +37,15 @@ export default function AboutPage() {
 
               <div className="grid md:grid-cols-2 gap-12 my-24">
                  <div className="aspect-square bg-bone rounded-[100px] overflow-hidden border border-sand/30">
-                    <img src="https://images.unsplash.com/photo-1544126592-807daa2b5d7a?q=80&w=1000" alt="Somatic Flow" className="w-full h-full object-cover opacity-60" />
+                    <img src="https://customer-assets.emergentagent.com/wingman/29fab97e-3d97-4ee3-a7c2-df0f13706430/attachments/1a8adf3e79cf4dadb4f2b6208dce502d_pexels-arun-350214906-15520327.jpg" alt="Somatic Flow" className="w-full h-full object-cover opacity-80" />
                  </div>
                  <div className="flex flex-col justify-center">
                     <p>I practiced yoga to get out of my mind and into my body, but because I was stuck in a chronic &ldquo;fight-or-flight&rdquo; loop, I was making my stiffness and posture worse. I didn&apos;t realize I was &ldquo;bracing&rdquo; into the poses, reinforcing the fascia-armor my body had built to survive childhood abuse. I was trying to force peace onto a system that didn&apos;t yet feel safe.</p>
                  </div>
               </div>
 
-              <p>Your fascia is your largest sensory organ and the biological archive of your history. At Eternal Release, we use somatic movement to signal safety to the Vagus nerve, allowing the body to finally drop its guard. We are reclaiming our right to be whole, to be agile, and to finally live in our own skin.</p>
+              <p>Your fascia is your largest sensory organ and the biological archive of your history. At Eternal Release, we use somatic movement to signal safety to the Vagus nerve, allowing the body to finally drop its guard and hydrate the &ldquo;stuck&rdquo; tissue. I believe that a flexible, agile body is the gateway to a resilient mind. We are reclaiming our right to be whole, to be agile, and to finally live in our own skin.</p>
 
-              <p className="font-medium text-black">
-                Healing isn&apos;t about becoming a &ldquo;perfect&rdquo; version of yourself. It&apos;s about building a body that is resilient enough to hold the full spectrum of human emotion. I truly believe that a flexible, agile body is the gateway to a resilient mind. We are reclaiming our right to be whole, to be agile, and to finally live in our own skin.
-              </p>
-              
               <div className="pt-12 italic opacity-60 text-base md:text-lg">
                  Sunnie Ray is a psychology student and yoga teacher. This platform is an educational sanctuary for somatic exploration.
               </div>

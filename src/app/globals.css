@@ -1,12 +1,46 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-html { scroll-behavior: smooth; }
-body { background-color: #FCFAF7; color: #1C1C1C; -webkit-font-smoothing: antialiased; background-image: url("https://www.transparenttextures.com/patterns/felt.png"); }
+@theme inline {
+  --color-bg: #FCFAF7;
+  --color-ink: #1C1C1C;
+  --color-bone: #F2EFE9;
+  --color-clay: #A8613F;
+  --color-moss: #3E4A34;
+  --color-sand: #D4C5A9;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.editorial-h1 {
+  font-size: clamp(3rem, 15vw, 11rem);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  font-weight: 300;
+}
+
+.editorial-h2 {
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+}
 
 .editorial-container {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+  @apply max-w-7xl mx-auto px-8 md:px-12;
 }

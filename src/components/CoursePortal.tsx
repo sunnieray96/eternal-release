@@ -5,34 +5,25 @@ export default async function CoursePortal() {
   const courses = await client.fetch(COURSES_QUERY).catch(() => []);
 
   return (
-    <section id="courses" className="py-48 md:py-80 bg-white relative">
+    <section id="courses" className="py-48 md:py-80 bg-white relative overflow-hidden">
       <div className="editorial-container">
-        <div className="max-w-3xl mb-32 text-left">
-          <p className="text-terracotta text-[10px] uppercase tracking-[0.4em] font-bold mb-6">Teachings</p>
-          <h2 className="font-serif text-5xl md:text-[9rem] font-light leading-tight mb-10 text-black text-balance">Pathways <br/><span className="italic font-light text-[#A8613F]">to Flow</span></h2>
-          <p className="text-xl text-ink leading-relaxed font-light">
-             Intentional somatic journeys designed for the ones traditional systems failed.
-          </p>
+        <div className="max-w-3xl mb-40 text-left">
+          <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-black/30 mb-8">Pathways</p>
+          <h2 className="font-serif text-5xl md:text-[10rem] font-light leading-tight text-black tracking-tighter">
+             Teachings
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid md:grid-cols-3 gap-24">
           {courses.length === 0 ? (
             <>
-              <CoursePlaceholder title="From Tension to Tenderness" level="Foundation" desc="A 7-day week-long journey to soften the psoas and hydrate the fascia around the heart." />
-              <CoursePlaceholder title="Returning to Safety" level="Intermediate" desc="Using the Vagus nerve and lateral gaze to signal safety to the brainstem." />
-              <CoursePlaceholder title="The Whole System" level="Advanced" desc="Advanced neuroplasticity flow to build new neural pathways for resilience." />
+              <Pathway title="From Tension to Tenderness" level="Foundation" desc="A 7-day week-long journey to soften the psoas and hydrate the fascia around the heart." img="https://customer-assets.emergentagent.com/wingman/29fab97e-3d97-4ee3-a7c2-df0f13706430/attachments/b7228eafce2343d8be0ede931f1eaa25_pexels-angela-roma-7479526.jpg" />
+              <Pathway title="Returning to Safety" level="Intermediate" desc="Using the Vagus nerve and lateral gaze to signal safety to the brainstem." img="https://customer-assets.emergentagent.com/wingman/29fab97e-3d97-4ee3-a7c2-df0f13706430/attachments/1a8adf3e79cf4dadb4f2b6208dce502d_pexels-arun-350214906-15520327.jpg" />
+              <Pathway title="The Whole System" level="Advanced" desc="Advanced neuroplasticity flow to build new neural pathways for resilience." img="https://customer-assets.emergentagent.com/wingman/29fab97e-3d97-4ee3-a7c2-df0f13706430/attachments/d88bb604e1054353ae9dcd0ccc20d03b_pexels-darina-belonogova-9167188.jpg" />
             </>
           ) : (
-            courses.map((course: any) => (
-              <div key={course._id} className="bg-white p-12 border border-sand/40 group shadow-sm hover:shadow-xl transition-all duration-500">
-                <p className="text-terracotta text-[10px] font-bold uppercase tracking-widest mb-6">{course.level}</p>
-                <h3 className="text-3xl font-serif italic mb-8 text-black">{course.title}</h3>
-                <p className="text-ink font-light mb-10 leading-relaxed text-balance">{course.description}</p>
-                <div className="pt-10 border-t border-sand/20 flex justify-between items-center">
-                   <span className="font-serif text-2xl text-black">${course.price || "Free" }</span>
-                   <button className="text-[10px] font-bold uppercase tracking-widest border-b border-black/10 pb-1 text-black">Details</button>
-                </div>
-              </div>
+            courses.map((c: any) => (
+               <Pathway key={c._id} title={c.title} level={c.level} desc={c.description} />
             ))
           )}
         </div>
@@ -41,15 +32,19 @@ export default async function CoursePortal() {
   );
 }
 
-function CoursePlaceholder({ title, level, desc }: any) {
+function Pathway({ title, level, desc, img }: any) {
    return (
-    <div className="bg-white/40 p-12 border border-sand/20 opacity-70 group hover:opacity-100 transition-all">
-      <p className="text-terracotta text-[10px] font-bold uppercase tracking-[0.3em] mb-6">{level}</p>
-      <h3 className="text-3xl font-serif italic mb-6 text-black leading-tight">{title}</h3>
-      <p className="text-ink/60 font-light text-sm mb-10 leading-relaxed">{desc}</p>
-      <div className="pt-10 border-t border-sand/10">
-         <span className="text-[10px] uppercase tracking-[0.4em] text-[#A8613F] font-bold italic">Opening Soon</span>
+      <div className="space-y-12 group">
+         <div className="aspect-[4/5] overflow-hidden rounded-[80px] border border-sand/20 relative group">
+            <img src={img || "https://images.unsplash.com/photo-1544126592-807daa2b5d7a?q=80&w=1000"} alt={title} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-black/10 mix-blend-overlay" />
+         </div>
+         <div className="text-left">
+            <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-clay mb-4 font-sans">{level}</p>
+            <h3 className="font-serif text-4xl italic text-black mb-8 leading-[1.1]">{title}</h3>
+            <p className="text-lg font-light text-black/60 leading-relaxed text-balance font-sans">{desc}</p>
+            <span className="inline-block mt-12 text-[10px] font-bold uppercase tracking-[0.5em] border-b border-black/10 pb-1 font-sans">Opening Soon</span>
+         </div>
       </div>
-    </div>
    )
 }

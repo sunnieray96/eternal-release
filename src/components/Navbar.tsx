@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "About", href: "/about" },
-  { label: "Journal", href: "/#blog" },
+  { label: "Manifesto", href: "/about" },
   { label: "Pathways", href: "/#courses" },
+  { label: "Journal", href: "/#blog" },
   { label: "Connect", href: "/#contact" },
 ];
 
@@ -47,7 +47,7 @@ export default function Navbar() {
           {navLinks.map(link => (
             <Link key={link.label} href={link.href} onClick={() => setOpen(false)} className="text-4xl font-serif italic text-black">{link.label}</Link>
           ))}
-          <button onClick={() => setOpen(false)} className="absolute top-10 right-10 p-4 focus:outline-none">
+          <button onClick={() => setOpen(false)} className="absolute top-10 right-10 p-4">
              <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
                <path d="M6 18L18 6M6 6l12 12" />
              </svg>
