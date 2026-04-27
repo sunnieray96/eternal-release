@@ -1,27 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-cream: #FDFBF7;
-  --color-cream-dark: #F5F0E8;
-  --color-parchment: #F2EBD9;
+  --color-bg: #FDFBF7;
+  --color-primary: #334155;
+  --color-secondary: #78716C;
+  --color-accent: #C67B5C;
   --color-sage: #8B9E7E;
-  --color-sage-light: #A8B89D;
   --color-sage-dark: #6B7F5E;
-  --color-forest: #2D4A2E;
-  --color-forest-light: #3E6340;
-  --color-slate-soft: #64748B;
-  --color-slate-dark: #334155;
-  --color-warm-white: #FDFBF7;
-  --color-stone: #78716C;
   --color-sand: #D4C5A9;
-  --color-blush: #E8D5C4;
-  --color-moss: #4A5D3E;
-  --color-terracotta: #C67B5C;
-  --color-terracotta-dark: #A8613F;
-  --color-terracotta-light: #D9977E;
-  --color-ochre: #D9A066;
-  --color-ochre-light: #E6BD8A;
-  --color-ochre-dark: #B8843E;
+  --color-terracotta: #A8613F;
   --font-serif: "Playfair Display", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
 }
@@ -31,62 +18,40 @@ html {
 }
 
 body {
-  background: var(--color-warm-white);
-  color: var(--color-slate-dark);
+  background-color: var(--color-bg);
+  color: var(--color-primary);
   font-family: var(--font-body);
-  background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
-  background-repeat: repeat;
+  background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+  line-height: 1.6;
 }
 
-::selection {
-  background: var(--color-terracotta-light);
-  color: white;
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
 }
 
-/* Custom Utilities */
 .text-balance {
   text-wrap: balance;
 }
 
-.texture-grain {
-  position: relative;
+/* Redesign Utilities */
+.editorial-container {
+  @apply max-w-6xl mx-auto px-8;
 }
 
-.texture-grain::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.04;
-  pointer-events: none;
-  background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
-  background-repeat: repeat;
-  z-index: 0;
+.manifesto-text {
+  @apply text-xl md:text-2xl font-light leading-relaxed;
 }
 
-.wabi-card {
-  border-radius: 2rem 1.5rem 2.5rem 1.5rem;
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+.wabi-border {
+  border: 1px solid var(--color-sand);
+  border-radius: 2rem 1.5rem 2.5rem 1.8rem;
 }
 
-.wabi-card:hover {
-  transform: translateY(-4px) rotate(0.5deg);
-  box-shadow: 0 30px 60px -12px rgba(198, 123, 92, 0.1);
+@keyframes slow-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-fade-in {
-  animation: fadeIn 1.2s ease-out forwards;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+.animate-slow-fade {
+  animation: slow-fade 2s ease-in-out forwards;
 }
