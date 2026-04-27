@@ -99,7 +99,7 @@ export default async function BlogPreview() {
                         <img src={urlFor(post.mainImage).url()} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                      )}
                   </div>
-                  <p className="text-terracotta text-[10px] uppercase tracking-widest font-bold mb-4">{post.category || "Journal"}</p>
+                  <p className="text-terracotta text-[10px] uppercase tracking-widest font-bold mb-4">{CATEGORY_LABELS[post.category || ""] || "Journal"}</p>
                   <h3 className="font-serif text-4xl text-slate-dark leading-tight italic group-hover:text-sage-dark transition-colors">{post.title}</h3>
                </article>
             ))}
