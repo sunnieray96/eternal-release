@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer id="contact" className="bg-[#1C1C1C] text-[#FCFAF7] pt-64 pb-20 overflow-hidden relative">
-      <div className="max-w-6xl mx-auto px-8 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
         <div className="grid md:grid-cols-12 gap-24 items-start mb-64">
           <div className="md:col-span-7">
             <a href="/" className="font-serif text-5xl md:text-7xl font-medium tracking-tighter mb-16 block">

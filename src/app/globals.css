@@ -1,17 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  body {
-    @apply bg-[#FCFAF7] text-[#1C1C1C] font-sans antialiased;
-    background-image: url("https://www.transparenttextures.com/patterns/felt.png");
-  }
-  h1, h2, h3, h4 {
-    @apply font-serif font-medium;
-  }
+@theme inline {
+  --color-bg: #FCFAF7;
+  --color-ink: #1C1C1C;
+  --color-bone: #F2EFE9;
+  --color-clay: #A8613F;
+  --color-moss: #3E4A34;
+  --color-sand: #D9D2C5;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+  line-height: 1.6;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-balance {
+  text-wrap: balance;
 }
 
 .editorial-container {
-  @apply max-w-6xl mx-auto px-8 md:px-12;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-reveal {
+  animation: reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

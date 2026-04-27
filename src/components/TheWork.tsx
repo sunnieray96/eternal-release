@@ -7,7 +7,7 @@ const pillars = [
 export default function TheWork() {
   return (
     <section id="work" className="py-48 md:py-80 bg-[#F2EFE9]/30">
-      <div className="max-w-6xl mx-auto px-8 md:px-12">
+      <div className="editorial-container">
         <div className="flex flex-col md:flex-row gap-32 items-center">
           <div className="flex-1">
              <div className="aspect-[3/4] bg-[#D9D2C5]/10 rounded-[100px] border border-[#D9D2C5]/20 flex items-center justify-center p-24 relative overflow-hidden">
@@ -19,16 +19,16 @@ export default function TheWork() {
              </div>
           </div>
           
-          <div className="flex-1 space-y-20">
+          <div className="flex-1 space-y-20 text-left">
              <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#1C1C1C]/30">The Architecture</p>
              <h2 className="font-serif text-5xl md:text-8xl font-light leading-tight">Your fascia is a <span className="italic font-light text-[#3E4A34]">living archive.</span></h2>
              
              <div className="space-y-16">
-                {pillars.map(p => (
-                   <div key={p.id} className="group">
+                {pillars.map(p => ( 
+                   <div key={p.id} className="group text-left">
                       <div className="flex items-baseline gap-8 mb-4">
                          <span className="text-xs font-bold text-[#A8613F]/40 tracking-widest">{p.id}</span>
-                         <h3 className="text-3xl font-serif italic">{p.title}</h3>
+                         <h3 className="text-3xl italic font-serif text-[#1C1C1C]">{p.title}</h3>
                       </div>
                       <p className="text-[#1C1C1C]/60 font-light leading-relaxed max-w-md">{p.text}</p>
                    </div>
