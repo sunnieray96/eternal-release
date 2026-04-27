@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main style={{ backgroundColor: '#FCFAF7' }}>
+    <main className="bg-[#FCFAF7]">
       <Navbar />
       <Hero />
       <IntroductionTeaser />
