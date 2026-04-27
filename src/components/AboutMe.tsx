@@ -43,7 +43,7 @@ export default async function AboutMe() {
             </div>
           ) : (
             <FallbackContent />
-         0)}
+         )}
         </div>
 
         {/* Decorative divider */}

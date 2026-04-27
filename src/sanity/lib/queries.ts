@@ -1,8 +1,20 @@
-import imageUrlBuilder from "@sanity/image-url";
-import { client } from "./client";
+export const COURSES_QUERY = `*[_type == "course"]{
+  _id,
+  title
+}`;
 
-const builder = imageUrlBuilder(client);
+export const FEATURED_POST_QUERY = `*[_type == "post" && featured == true][0]{
+  _id,
+  title,
+  slug,
+  mainImage,
+  excerpt
+}`;
 
-export function urlFor(source: any) {
-  return builder.image(source);
-}
+export const RECENT_POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc)[0...3]{
+  _id,
+  title,
+  slug,
+  mainImage,
+  excerpt
+}`;
