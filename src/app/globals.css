@@ -1,44 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
+@theme inline {
   --color-bg: #FCFAF7;
   --color-ink: #1C1C1C;
   --color-bone: #F2EFE9;
   --color-clay: #A8613F;
   --color-moss: #3E4A34;
   --color-sand: #D4C5A9;
-  --font-serif: 'Playfair Display', serif;
-  --font-sans: 'Inter', sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-  background-color: var(--color-bg);
+html { scroll-behavior: smooth; }
+body { background-color: var(--color-bg); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; background-image: url("https://www.transparenttextures.com/patterns/felt.png"); overflow-x: hidden; }
+
+.editorial-h1 { font-family: var(--font-serif); font-size: clamp(3rem, 15vw, 11rem); line-height: 0.85; letter-spacing: -0.04em; font-weight: 300; }
+.editorial-h2 { font-family: var(--font-serif); font-size: clamp(2.5rem, 8vw, 7rem); line-height: 1.1; letter-spacing: -0.02em; font-weight: 300; }
+
+.editorial-container {
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-body {
-  background-color: var(--color-bg);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+.animate-reveal {
+  animation: reveal 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-h1, h2, h3, h4, .font-serif {
-  font-family: var(--font-serif);
-}
-
-.text-balance {
-  text-wrap: balance;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
