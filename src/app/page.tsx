@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import IntroductionTeaser from "@/components/IntroductionTeaser";
-import ApproachTeaser from "@/components/ApproachTeaser";
+import TheRealization from "@/components/TheRealization";
+import TheScience from "@/components/TheScience";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,7 +11,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <IntroductionTeaser />
-      <ApproachTeaser />
+      <TheRealization />
+      <TheScience />
       <Footer />
     </main>
   );
