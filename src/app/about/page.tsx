@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 
 export default function AboutPage() {
   return (
-    <main className="bg-[#FCFAF7] min-h-screen text-left">
+    <main className="bg-[#FCFAF7] min-h-screen font-sans text-left">
       <Navbar />
       <section className="pt-64 pb-32 max-w-7xl mx-auto px-8 md:px-12">
         <div className="max-w-4xl">
@@ -22,13 +22,13 @@ export default function AboutPage() {
              <span className="italic font-light text-[#A8613F]">The Science of a Raw Soul</span>
            </h1>
            
-           <div className="space-y-16 text-xl md:text-3xl font-light opacity-80 leading-relaxed">
+           <div className="space-y-16 text-xl md:text-2xl font-light opacity-80 leading-relaxed">
               <p>My name is Sunnie Ray, and yes, it is my birth name. My mother thought she was being clever, but for a long time, it felt like a cruel irony. When your name is &ldquo;Sunnie,&rdquo; the world expects light, but my reality was a shadow. My story began with a primal wound: I was adopted at six months old. Before I had a single word to describe my world, my nervous system had already learned the language of loss and abandonment.</p>
 
               <p>That early imprint was compounded by years of abuse, neglect, and sexual assault that followed my adoption. By my early twenties, I was a walking storm, angry, unruly, and struggling with attachment issues so extreme they terrified the professionals. I&apos;ve had therapists quit on me. I&apos;ve been called &ldquo;too much,&rdquo; &ldquo;reactive,&rdquo; and &ldquo;unstable.&rdquo; I was cycled through labels like Bipolar, BPD, and even Autism, diagnoses that tried to explain my symptoms without ever touching the fire that caused them. While labels can be helpful for some, they never helped guide me through the experience. I was stiff, tense, anxious, and reactive.</p>
 
               <div className="py-24 border-y border-[#D9D2C5]/30 my-32 text-center">
-                 <p className="font-serif italic text-black text-4xl md:text-6xl text-center leading-tight">
+                 <p className="font-serif italic text-black text-4xl md:text-6xl text-center leading-tight text-balance">
                     &ldquo;I&apos;d rather be whole than good.&rdquo; — Carl Jung
                  </p>
               </div>
