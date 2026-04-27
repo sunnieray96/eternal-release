@@ -1,8 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TheRealization from "@/components/TheRealization";
-import TheScience from "@/components/TheScience";
-import PathwaysTeaser from "@/components/PathwaysTeaser";
+import StoryTeaser from "@/components/StoryTeaser";
+import TheWork from "@/components/TheWork";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,9 +9,8 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <TheRealization />
-      <TheScience />
-      <PathwaysTeaser />
+      <StoryTeaser />
+      <TheWork />
       <Footer />
     </main>
   );

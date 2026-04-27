@@ -2,48 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-bg: #FCFAF7;
-  --color-ink: #1C1C1C;
-  --color-bone: #F2EFE9;
-  --color-clay: #A8613F;
-  --color-moss: #3E4A34;
-  --color-sand: #D9D2C5;
-  --font-serif: 'Playfair Display', serif;
-  --font-sans: 'Inter', sans-serif;
+@layer base {
+  body {
+    @apply bg-[#FCFAF7] text-[#1C1C1C] font-sans antialiased;
+    background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif font-medium;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  background-color: var(--color-bg);
-}
-
-body {
-  background-color: var(--color-bg);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  background-image: url("https://www.transparenttextures.com/patterns/felt.png");
-}
-
-.editorial-h1 {
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 15vw, 11rem);
-  font-weight: 300;
-  line-height: 0.85;
-  letter-spacing: -0.04em;
-}
-
-.editorial-h2 {
-  font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 8vw, 7rem);
-  font-weight: 300;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.manifesto-text {
-  font-size: clamp(1.1rem, 2vw, 1.8rem);
-  font-weight: 300;
-  line-height: 1.7;
+.editorial-container {
+  @apply max-w-6xl mx-auto px-8 md:px-12;
 }
