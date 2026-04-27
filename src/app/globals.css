@@ -13,6 +13,8 @@
   --color-sand: #D4C5A9;
   --color-blush: #E8D5C4;
   --color-moss: #4A5D3E;
+  --color-terracotta: #C67B5C;
+  --color-ochre: #D9A066;
   --font-serif: "Playfair Display", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
 }
@@ -25,6 +27,11 @@ body {
   background: var(--color-warm-white);
   color: var(--color-slate-dark);
   font-family: var(--font-body);
+  background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+}
+
+section {
+  position: relative;
 }
 
 ::selection {
