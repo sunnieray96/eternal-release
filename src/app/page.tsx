@@ -4,7 +4,6 @@ import AboutMe from "@/components/AboutMe";
 import Approach from "@/components/Approach";
 import BlogPreview from "@/components/BlogPreview";
 import CoursePortal from "@/components/CoursePortal";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
         <Approach />
         <BlogPreview />
         <CoursePortal />
-        <Contact />
       </main>
       <Footer />
     </>
