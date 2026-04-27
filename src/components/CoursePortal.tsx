@@ -1,172 +1,90 @@
 import { client } from "@/sanity/lib/client";
 import { COURSES_QUERY } from "@/sanity/lib/queries";
 
-interface Module {
-  title: string;
-  description?: string;
-  duration?: string;
-}
-
 interface Course {
   _id: string;
   title: string;
   level?: string;
   description: string;
   price?: number;
-  duration?: string;
-  format?: string;
-  popular?: boolean;
-  modules?: Module[];
 }
-
-const fallbackCourses: Course[] = [
-  {
-    _id: "fallback-1",
-    level: "Foundation",
-    title: "Returning to Safety",
-    description:
-      "A 4-week gentle introduction to somatic awareness. Learn to recognize your nervous system states and build a daily practice of grounding and co-regulation.",
-    duration: "4 weeks",
-    format: "Self-paced + live Q&A",
-  },
-  {
-    _id: "fallback-2",
-    level: "Deepening",
-    title: "Fascia & Feeling",
-    description:
-      "Explore the connection between connective tissue and emotional holding patterns. Includes guided myofascial release sequences designed for trauma survivors.",
-    duration: "6 weeks",
-    format: "Live cohort",
-    popular: true,
-  },
-  {
-    _id: "fallback-3",
-    level: "Integration",
-    title: "Whole Self, Whole System",
-    description:
-      "Advanced integration of somatic, fascial, and psychological approaches. For those ready to weave all three pillars into a sustainable healing practice.",
-    duration: "8 weeks",
-    format: "Mentorship circle",
-  },
-];
 
 async function getCourses(): Promise<Course[]> {
   try {
     if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) return [];
     const data = await client.fetch(COURSES_QUERY);
-    return data && data.length > 0 ? data : [];
+    return data || [];
   } catch {
     return [];
   }
 }
 
 export default async function CoursePortal() {
-  const sanityCourses = await getCourses();
-  const courses = sanityCourses.length > 0 ? sanityCourses : fallbackCourses;
+  const courses = await getCourses();
+  const hasCourses = courses.length > 0;
 
   return (
-    <section id="courses" className="py-24 md:py-32 bg-warm-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sage font-medium text-sm tracking-[0.2em] uppercase mb-4">
-            Course Portal
+    <section id="courses" className="py-32 md:py-48 bg-cream/20 relative">
+      <div className="max-w-6xl mx-auto px-6 relative">
+        <div className="text-center max-w-2xl mx-auto px-6 mb-32">
+          <p className="text-terracotta font-medium text-xs tracking-[0.3em] uppercase mb-4">
+            Offerings
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl font-medium text-slate-dark mb-6">
-            Begin Your Journey
+          <h2 className="font-serif text-5xl md:text-6xl font-medium text-slate-dark mb-8">
+            Pathways to Flow
           </h2>
-          <p className="text-stone text-lg leading-relaxed">
-            Three pathways designed to meet your nervous system where it is,
-            whether you&apos;re just beginning to explore or deepening an existing practice.
+          <p className="text-stone texm-lg leading-relaxed font-light">
+            Intentional somatic journeys designed for the ones traditional systems failed.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {courses.map((course, i) => {
-            const isPopular = course.popular ?? i === 1;
-            return (
-              <div
-                key={course._id}
-                className={`relative rounded-2xl p-8 md:p-10 border transition-all duration-500 hover:shadow-xl hover:shadow-sage/5 ${
-                  isPopular
-                    ? "bg-sage/5 border-sage/20 hover:border-sage/40"
-                    : "bg-cream/40 border-cream-dark/40 hover:border-sage/20"
-                }`}
-              >
-                {isPopular && (
-                  <span className="absolute -top-3 left-8 text-xs font-medium text-white bg-sage px-3 py-1 rounded-full">
-                    Most Popular
-                  </span>
-                )}
-
-                <p className="text-xs font-medium text-sage tracking-[0.15em] uppercase mb-2">
-                  {course.level}
-                </p>
-                <h3 className="font-serif text-2xl font-medium text-slate-dark mb-4">
-                  {course.title}
-                </h3>
-                <p className="text-stone text-[15px] leading-relaxed mb-6">
-                  {course.description}
-                </p>
-
-                {course.price != null && (
-                  <p className="text-sage-dark font-medium text-lg mb-4">
-                    ${course.price}
-                  </p>
-                )}
-
-                <div className="flex items-center gap-4 mb-8 text-sm text-stone">
-                  {course.duration && (
-                    <span className="flex items-center gap-1.5">
-                      <svg
-                        width="16"
-                        height="16"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 6v6l4 2" strokeLinecap="round" />
-                      </svg>
-                      {course.duration}
-                    </span>
-                  )}
-                  {course.format && (
-                    <span className="flex items-center gap-1.5">
-                      <svg
-                        width="16"
-                        height="16"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                       />
-                      </svg>
-                      {course.format}
-                    </span>
-                  )}
+        {!hasCourses ? (_
+          <div className="grid md:grid-cols-3 gap-12">
+            <PlaceholderCard 
+              title="7-Day Fascia Reset" 
+              desc="A week-long journey to soften the body and quiet the mind." 
+              level="Foundation" 
+            />
+            <PlaceholderCard 
+              title="Returning to Safety" 
+              desc="Understanding the nervous system and somatic awareness." 
+              level="Intermediate" 
+            />
+            <PlaceholderCard 
+              title="Whole System" 
+              desc="Advanced integration of somatic and psychological approaches." 
+              level="Advanced" 
+            />
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-3 gap-12">
+            {courses.map((course) => (
+              <div key={course._id} className="bg-white/50 backdrop-blur-sm p-12 rounded-[40px] border border-sage/10 shadow-sm hover:shadow-xl transition-all duration-500">
+                <p className="text-terracotta text-[10px] uppercase tracking-widest mb-4 font-bold">{course.level}</p>
+                <h3 className="font-serif text-3xl text-slate-dark mb-6">{course.title}</h3>
+                <p className="text-stone font-light leading-relaxed mb-8">{course.description}</p>
+                <div className="pt-8 border-t border-component/10 flex items-center justify-between">
+                  <span className="text-xl font-serif text-sage-dark">${course.price || "Free"}</span>
+                  <button className="text-sm font-medium border-b border-slate-dark/20 pl-1">Learn More</button>
                 </div>
-
-                <a
-                  href="#contact"
-                  className={`block w-full text-center py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    isPopular
-                      ? "bg-sage text-white hover:bg-sage-dark hover:shadow-lg hover:shadow-sage/20"
-                      : "border border-sage/30 text-sage-dark hover:bg-sage/5"
-                  }`}
-                >
-                  Learn More
-                </a>
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
+  );
+}
+
+function PlaceholderCard({ title, desc, level }: any) {
+  return (
+    <div className="bg-white/20 backdrop-blur-sm text-slate-dark/40 p-12 rounded-[40px] border border-cream/50 group hover:bg-white/40 transition-all duration-500 opacity-60">
+      <p className="text-terracotta/40 text-[10px] uppercase tracking-widest mb-4 font-bold">{level}</p>
+      <h3 className="font-serif text-3xl mb-6">{title}</h3>
+      <p> text-stone/40 font-light leading-relaxed mb-8">{desc}</p>
+      <div className="pt-8 border-t border-sage/5">
+        <span className="text-xs uppercase tracking-widest text-stone/30 italic">Coming Soon via Sanity</span>
+      </div>
+    </div>
   );
 }
