@@ -1,1 +1,48 @@
-ZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gRm9vdGVyKCkgewogIHJldHVybiAoCiAgICA8Zm9vdGVyIGNsYXNzTmFtZT0icHktMjQgYmctc2xhdGUtZGFyayB0ZXh0LWNyZWFtLzYwIHJlbGF0aXZlIG92ZXJmbG93LWhpZGRlbiI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYXgtdy02eGwgbXgtYXV0byBweC02Ij4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBtZDpncmlkLWNvbHMtMiBnYXAtMTYgaXRlbXMtY2VudGVyIj4KICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgIDxhIGhyZWY9IiMiIGNsYXNzTmFtZT0iZm9udC1zZXJpZiB0ZXh0LTN4bCBmb250LXNlbWlib2xkIHRleHQtY3JlYW0gdHJhbnNpdGlvbi1jb2xvcnMgaG92ZXI6dGV4dC1zYWdlIHRyYWNraW5nLXdpZGUiPgogICAgICAgICAgICAgIEV0ZXJuYWwgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXNhZ2UtbGlnaHQgaXRhbGljIj5SZWxlYXNlPC9zcGFuPgogICAgICAgICAgICA8L2E+CiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1sZyBtdC00IGZvbnQtbGlnaHQgdGV4dC1jcmVhbS80MCBtYXgtdy1zbSI+CiAgICAgICAgICAgICAgU29tYXRpYyBoZWFsaW5nIGRlc2lnbmVkIGZvciB0aGUgY29tcGxleCBtaW5kLgogICAgICAgICAgICA8L3A+CiAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS04IHRleHQtcmlnaHQiPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBqdXN0aWZ5LWVuZCBnYXAtOCB0ZXh0LXNtIHVwcGVyY2FzZSB0cmFja2luZy13aWRlc3QiPgogICAgICAgICAgICAgIDxhIGhyZWY9IiNhYm91dCIgY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LWNyZWFtIHRyYW5zaXRpb24tY29sb3JzIj5BYm91dDwvYT4KICAgICAgICAgICAgICA8YSBocmVmPSIjYmxvZyIgY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LWNyZWFtIHRyYW5zaXRpb24tY29sb3JzIj5Kb3VybmFsPC9hPgogICAgICAgICAgICAgIDxhIGhyZWY9IiNjb3Vyc2VzIiBjbGFzc05hbWU9ImhvdmVyOnRleHQtY3JlYW0gdHJhbnNpdGlvbi1jb2xvcnMiPlBhdGh3YXlzPC9hPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXganVzdGlmeS1lbmQiPgogICAgICAgICAgICAgIDxhIGhyZWY9Imh0dHBzOi8vaW5zdGFncmFtLmNvbS9ldGVybmFsIiBjbGFzc05hbWU9ImhvdmVyOnRleHQtY3JlYW0gdHJhbnNpdGlvbi1jb2xvcnMiPkluc3RhZ3JhbTwvYT4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTI0IHB0LTggYm9yZGVyLXQgYm9yZGVyLWNyZWFtLzEwIHRleHQtWzEwcHhdIHVwcGVyY2FzZSB0cmFja2luZy13aWRlc3QgdGV4dC1jcmVhbS8zMCBtYXgtdy0zeGwiPgogICAgICAgICAgPHA+wqkge25ldyBEYXRlKCkuZ2V0RnVsbFllYXIoKX0gRXRlcm5hbCBSZWxlYXNlLiBBbGwgcmlnaHRzIHJlc2VydmVkLiBTdW5uaWUgUmF5IGlzIGEgcHN5Y2hvbG9neSBzdHVkZW50IGFuZCBjZXJ0aWZpZWQgeW9pZ2EgdGVhY2hlci4gVGhlIGNvbnRlbnQgcHJvdmlkZWQgaXMgZm9yIGVkdWNhdGlvbmFsIGFuZCBzZWxmLXJlZ3VsYXRpb24gcHVycG9zZXMgb25seS4gSXQgaXMgbm90IGEgc3Vic3RpdHV0ZSBmb3IgcHJvZmVzc2lvbmFsIG1lZGljYWwgYWR2aWNlLCBkaWFnbm9zaXMsIG9yIHRyZWF0bWVudC4gSWYgeW91IGFyZSBleHBlcmllbmNpbmcgYSBtZW50YWwgaGVWFsdGggY3Jpc2lzLCBjb250YWN0IGVtZXJnZW5jeSBzZXJ2aWNlcyBpbW1lZGlhdGVseS48L3A+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9mb290ZXI+CiAgKTsKfQo=
+export default function Footer() {
+  return (
+    <footer id="contact" className="py-32 bg-slate-dark text-cream relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
+           style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/felt.png")' }} />
+           
+      <div className="max-w-7xl mx-auto px-8 relative">
+        <div className="flex flex-col md:grid md:grid-cols-[2fr_1fr_1fr] gap-20 items-start">
+          <div className="max-w-md">
+            <a href="#" className="font-serif text-4xl font-medium tracking-tight mb-8 block">
+               Eternal <span className="font-light italic text-sage-light">Release</span>
+            </a>
+            <p className="text-cream/40 text-lg font-light leading-relaxed mb-10">
+               Somatic healing designed for the complex mind. Integrating psychology, fascia release, and ancient movement to help you return home.
+            </p>
+            <div className="flex gap-10">
+               <a href="https://instagram.com/eternal" className="text-[10px] font-bold uppercase tracking-[0.3em] hover:text-terracotta-light transition-all">Instagram</a>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <p className="text-terracotta-light text-[10px] uppercase tracking-widest font-bold mb-10">Explore</p>
+            <nav className="flex flex-col gap-4">
+              <a href="#about" className="text-sm font-light hover:text-sage-light transition-colors">Manifesto</a>
+              <a href="#blog" className="text-sm font-light hover:text-sage-light transition-colors">The Journal</a>
+              <a href="#courses" className="text-sm font-light hover:text-sage-light transition-colors">Course Portal</a>
+            </nav>
+          </div>
+
+          <div className="space-y-6">
+            <p className="text-terracotta-light text-[10px] uppercase tracking-widest font-bold mb-10">Connect</p>
+            <p className="text-sm font-light mb-8">What is on your heart?</p>
+            <a href="mailto:hello@eternalrelease.org" className="text-xl font-serif italic border-b border-cream/20 pb-1">hello@eternalrelease.org</a>
+          </div>
+        </div>
+
+        <div className="mt-32 pt-10 border-t border-white/5 space-y-8">
+           <p className="text-cream/20 text-[9px] uppercase tracking-[0.5em] text-center">
+              © {new Date().getFullYear()} Eternal Release. All rights reserved.
+           </p>
+           <p className="text-cream/30 text-[10px] leading-relaxed max-w-4xl mx-auto text-center font-light uppercase tracking-widest italic">
+              Sunnie Ray is a psychology student and certified yoga teacher. The content provided is for educational and self-regulation purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. If you are experiencing a mental health crisis, contact emergency services immediately.
+           </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
