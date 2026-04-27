@@ -21,7 +21,7 @@ export default function TheWork() {
           
           <div className="flex-1 space-y-20 text-left">
              <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#1C1C1C]/30">The Architecture</p>
-             <h2 className="font-serif text-5xl md:text-8xl font-light leading-tight">Your fascia is a <span className="italic font-light text-[#3E4A34]">living archive.</span></h2>
+             <h2 className="font-serif text-5xl md:text-[7rem] font-light leading-tight">Your fascia is a <br/><span className="italic font-light text-[#3E4A34]">living archive.</span></h2>
              
              <div className="space-y-16">
                 {pillars.map(p => ( 

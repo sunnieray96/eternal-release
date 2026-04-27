@@ -6,14 +6,14 @@ export default function AboutPage() {
     <main className="bg-[#FCFAF7] min-h-screen">
       <Navbar />
       <section className="pt-64 pb-32 editorial-container">
-        <div className="max-w-4xl mx-auto">
-           <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#1C1C1C]/40 mb-12">The Manifesto</p>
-           <h1 className="font-serif text-5xl md:text-8xl font-medium leading-[1.1] mb-24 text-[#1C1C1C]">
+        <div className="max-w-4xl">
+           <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#1C1C1C]/40 mb-12 uppercase">The Manifesto</p>
+           <h1 className="font-serif text-5xl md:text-[8rem] font-medium leading-[1] mb-24">
              Beyond the Labels: <br/>
              <span className="italic font-light text-[#A8613F]">The Science of a Raw Soul</span>
            </h1>
            
-           <div className="space-y-16 text-xl md:text-2xl font-light text-[#1C1C1C]/80 leading-relaxed">
+           <div className="space-y-16 text-xl md:text-3xl font-light text-[#1C1C1C]/80 leading-relaxed">
               <p>My name is Sunnie Ray, and yes, it is my birth name. My mother thought she was being clever, but for a long time, it felt like a cruel irony. When your name is &ldquo;Sunnie,&rdquo; the world expects light, but my reality was a shadow. My story began with a primal wound: I was adopted at six months old. Before I had a single word to describe my world, my nervous system had already learned the language of loss and abandonment.</p>
               
               <p>That early imprint was compounded by years of abuse, neglect, and sexual assault that followed. By my early twenties, I was a walking storm, angry, unruly, and struggling with attachment issues so extreme they terrified the professionals. I&apos;ve had therapists quit on me. I&apos;ve been called &ldquo;too much,&rdquo; &ldquo;reactive,&rdquo; and &ldquo;unstable.&rdquo; I was cycled through labels like Bipolar, BPD, and even Autism, diagnoses that tried to explain my symptoms without ever touching the fire that caused them. While labels can be helpful for some, they never helped guide me through the experience. I was stiff, tense, anxious, and reactive.</p>
