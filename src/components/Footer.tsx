@@ -1,6 +1,7 @@
 export default function Footer() {
   return (
     <footer id="contact" className="py-32 bg-slate-dark text-cream relative overflow-hidden">
+      {/* Texture Layer */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
            style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/felt.png")' }} />
            
