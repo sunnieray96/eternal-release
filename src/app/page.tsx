@@ -1,23 +1,19 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import IntroductionTeaser from "@/components/IntroductionTeaser";
-import Approach from "@/components/Approach";
-import BlogPreview from "@/components/BlogPreview";
-import CoursePortal from "@/components/CoursePortal";
+import TheRealization from "@/components/TheRealization";
+import TheScience from "@/components/TheScience";
+import Pathways from "@/components/Pathways";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <main className="bg-bg">
       <Navbar />
-      <main>
-        <Hero />
-        <IntroductionTeaser />
-        <Approach />
-        <BlogPreview />
-        <CoursePortal />
-      </main>
+      <Hero />
+      <TheRealization />
+      <TheScience />
+      <Pathways />
       <Footer />
-    </>
+    </main>
   );
 }
