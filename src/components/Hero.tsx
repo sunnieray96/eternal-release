@@ -6,82 +6,67 @@ export default function Hero() {
   const [email, setEmail] = useState("");
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Texture Layer */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-           style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/grain.png")' }} />
-      
-      {/* Soft gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cream via-warm-white to-cream-dark/30" />
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      {/* Background Ethereal elements */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-[10%] right-[-5%] w-[40vw] h-[40vw] bg-sage/5 rounded-full blur-[120px] animate-float" />
+        <div className="absolute bottom-[5%] left-[-10%] w-[50vw] h-[50vw] bg-terracotta/5 rounded-full blur-[150px]" />
+      </div>
 
-      {/* Organic Ethereal Shapes */}
-      <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-sage/10 blur-[100px] animate-pulse" />
-      <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-terracotta/5 blur-[120px]" />
-
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <p className="text-sage-dark font-medium text-xs md:text-sm tracking-[0.3em] uppercase mb-8 animate-fadeIn">
-          Science meets Soul · Somatic Release · Fascia Work
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <p className="text-terracotta font-medium text-xs md:text-sm tracking-[0.4em] uppercase mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
+          Somatic Healing · Fascia Release · Nervous System Regulation
         </p>
 
-        <h1 className="font-serif text-6xl md:text-8xl font-medium text-slate-dark leading-[1.1] mb-8 animate-fadeIn">
+        <h1 className="font-serif text-6xl md:text-9xl font-medium text-slate-dark leading-[1.1] mb-10 text-balance animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
           Your body knows
           <br />
-          <span className="italic text-sage font-light">the way home</span>
+          <span className="italic font-light text-sage-dark">the way home</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-stone leading-relaxed max-w-2xl mx-auto mb-12 animate-fadeIn">
+        <p className="text-lg md:text-2xl text-stone leading-relaxed max-w-2xl mx-auto mb-16 font-light animate-fade-in opacity-0" style={{ animationDelay: "0.6s" }}>
           A gentle, evidence-based approach to healing CPTSD, BPD, and Bipolar. 
-          We move out of the storm and back into the natural flow of your nervous system.
+          Return to yourself, one breath at a time.
         </p>
 
-        {/* Waitlist Form */}
-        <div className="max-w-md mx-auto mb-12 animate-fadeIn">
+        {/* Waitlist Section */}
+        <div className="max-w-md mx-auto mb-12 animate-fade-in opacity-0" style={{ animationDelay: "0.8s" }}>
           <form 
             action="https://formspree.io/f/YOUR_FORM_ID" 
             method="POST"
-            className="relative group"
+            className="flex flex-col sm:flex-row gap-3"
           >
             <input
               type="email"
               name="email"
               required
               placeholder="Join the waitlist for the 7-Day Reset..."
-              className="w-full px-6 py-4 rounded-full bg-white/80 backdrop-blur-sm border border-sage/20 focus:outline-none focus:border-sage/50 text-slate-dark placeholder:text-stone/60 transition-all shadow-sm group-hover:shadow-md"
+              className="flex-1 px-6 py-4 rounded-full bg-white/40 backdrop-blur-md border border-sand/30 focus:outline-none focus:border-sage text-slate-dark placeholder:text-stone/50 transition-all shadow-sm"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <button
               type="submit"
-              className="absolute right-2 top-2 px-6 py-2 bg-sage text-white rounded-full text-sm font-medium hover:bg-sage-dark transition-all"
+              className="px-10 py-4 bg-sage text-white rounded-full text-sm font-medium hover:bg-sage-dark transition-all shadow-md hover:shadow-sage/20"
             >
               Join
             </button>
           </form>
-          <p className="mt-3 text-[10px] text-stone/60 uppercase tracking-widest">
-            Be the first to know when courses drop
+          <p className="mt-4 text-[10px] uppercase tracking-widest text-stone/60">
+            Secure your spot for the next cohort
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fadeIn">
-          <a
-            href="#about"
-            className="text-sm font-medium text-slate-dark hover:text-sage transition-colors border-b border-slate-dark/20 hover:border-sage pb-1"
-          >
-            Read the Manifesto
-          </a>
-          <span className="hidden sm:inline text-stone/30">|</span>
-          <a
-            href="#courses"
-            className="text-sm font-medium text-slate-dark hover:text-sage transition-colors border-b border-slate-dark/20 hover:border-sage pb-1"
-          >
-            Explore Pathways
-          </a>
+        <div className="flex justify-center gap-10 opacity-0 animate-fade-in" style={{ animationDelay: "1s" }}>
+           <a href="#about" className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-dark/60 hover:text-terracotta transition-colors border-b border-sand/50 pb-1">Manifesto</a>
+           <a href="#courses" className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-dark/60 hover:text-terracotta transition-colors border-b border-sand/50 pb-1">Pathways</a>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fadeIn">
-        <div className="w-px h-12 bg-gradient-to-b from-sage/60 to-transparent" />
+      {/* Aesthetic Scroll Indicator */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40">
+         <span className="text-[9px] uppercase tracking-[0.4em] text-stone vertical-text">Scroll</span>
+         <div className="w-px h-16 bg-gradient-to-b from-stone to-transparent" />
       </div>
     </section>
   );
