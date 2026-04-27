@@ -9,7 +9,7 @@ export default async function CoursePortal() {
       <div className="editorial-container">
         <div className="max-w-3xl mb-32 text-left">
           <p className="text-terracotta text-[10px] uppercase tracking-[0.4em] font-bold mb-6">Teachings</p>
-          <h2 className="font-serif text-5xl md:text-[9rem] font-light leading-tight mb-10 text-black">Pathways <br/><span className="italic font-light text-[#A8613F]">to Flow</span></h2>
+          <h2 className="font-serif text-5xl md:text-[9rem] font-light leading-tight mb-10 text-black text-balance">Pathways <br/><span className="italic font-light text-[#A8613F]">to Flow</span></h2>
           <p className="text-xl text-ink leading-relaxed font-light">
              Intentional somatic journeys designed for the ones traditional systems failed.
           </p>
@@ -24,10 +24,10 @@ export default async function CoursePortal() {
             </>
           ) : (
             courses.map((course: any) => (
-              <div key={course._id} className="bg-white p-12 wabi-border group shadow-sm hover:shadow-xl transition-all duration-500">
+              <div key={course._id} className="bg-white p-12 border border-sand/40 group shadow-sm hover:shadow-xl transition-all duration-500">
                 <p className="text-terracotta text-[10px] font-bold uppercase tracking-widest mb-6">{course.level}</p>
                 <h3 className="text-3xl font-serif italic mb-8 text-black">{course.title}</h3>
-                <p className="text-ink font-light mb-10 leading-relaxed">{course.description}</p>
+                <p className="text-ink font-light mb-10 leading-relaxed text-balance">{course.description}</p>
                 <div className="pt-10 border-t border-sand/20 flex justify-between items-center">
                    <span className="font-serif text-2xl text-black">${course.price || "Free" }</span>
                    <button className="text-[10px] font-bold uppercase tracking-widest border-b border-black/10 pb-1 text-black">Details</button>
@@ -43,12 +43,12 @@ export default async function CoursePortal() {
 
 function CoursePlaceholder({ title, level, desc }: any) {
    return (
-    <div className="bg-white/40 p-12 wabi-border opacity-70 group hover:opacity-100 transition-all">
+    <div className="bg-white/40 p-12 border border-sand/20 opacity-70 group hover:opacity-100 transition-all">
       <p className="text-terracotta text-[10px] font-bold uppercase tracking-[0.3em] mb-6">{level}</p>
-      <h3 className="text-3xl font-serif italic mb-6 text-black">{title}</h3>
+      <h3 className="text-3xl font-serif italic mb-6 text-black leading-tight">{title}</h3>
       <p className="text-ink/60 font-light text-sm mb-10 leading-relaxed">{desc}</p>
       <div className="pt-10 border-t border-sand/10">
-         <span className="text-[10px] uppercase tracking-[0.4em] text-clay font-bold italic">Opening Soon</span>
+         <span className="text-[10px] uppercase tracking-[0.4em] text-[#A8613F] font-bold italic">Opening Soon</span>
       </div>
     </div>
    )
