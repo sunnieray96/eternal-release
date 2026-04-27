@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Journal", href: "#blog" },
-  { label: "Pathways", href: "#courses" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Journal", href: "/#blog" },
+  { label: "Pathways", href: "/#courses" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -15,22 +15,22 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-8 transition-all duration-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between bg-white/40 backdrop-blur-md rounded-full px-8 py-4 border border-sand/10 shadow-sm">
-        <a href="#" className="font-serif text-2xl tracking-tight text-primary">
+        <a href="/" className="font-serif text-2xl tracking-tight text-primary">
           Eternal <span className="italic font-light text-sage-dark">Release</span>
         </a>
 
         <div className="hidden md:flex items-center gap-12">
           {navLinks.map((link) => (
             <a
-              key={link.href}
+              key={link.label}
               href={link.href}
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary/60 hover:text-accent transition-colors"
+              className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/60 hover:text-accent transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="#courses"
+            href="/#courses"
             className="px-6 py-2 bg-primary text-white rounded-full text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-sage transition-all"
           >
             Begin
@@ -45,10 +45,17 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="fixed inset-0 bg-bg z-40 flex flex-col items-center justify-center gap-8 animate-slow-fade">
-          <a href="#about" onClick={() => setOpen(false)} className="font-serif text-4xl italic text-primary">Manifesto</a>
-          <a href="#blog" onClick={() => setOpen(false)} className="font-serif text-4xl italic text-primary">Journal</a>
-          <a href="#courses" onClick={() => setOpen(false)} className="font-serif text-4xl italic text-primary">Pathways</a>
+        <div className="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8">
+          {navLinks.map((link) => (
+            <a 
+              key={link.label} 
+              href={link.href} 
+              onClick={() => setOpen(false)} 
+              className="font-serif text-4xl italic text-primary hover:text-accent transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
           <button onClick={() => setOpen(false)} className="absolute top-10 right-10 p-4">
             <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
               <path d="M6 18L18 6M6 6l12 12" />

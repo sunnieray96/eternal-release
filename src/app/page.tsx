@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import AboutMe from "@/components/AboutMe";
+import IntroductionTeaser from "@/components/IntroductionTeaser";
 import Approach from "@/components/Approach";
 import BlogPreview from "@/components/BlogPreview";
 import CoursePortal from "@/components/CoursePortal";
@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <AboutMe />
+        <IntroductionTeaser />
         <Approach />
         <BlogPreview />
         <CoursePortal />
