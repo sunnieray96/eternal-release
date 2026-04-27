@@ -1,22 +1,18 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import IntroductionTeaser from "@/components/IntroductionTeaser";
-import TheScience from "@/components/TheScience";
-import BlogPreview from "@/components/BlogPreview";
-import CoursePortal from "@/components/CoursePortal";
-import Contact from "@/components/Contact";
+import StorySection from "@/components/StorySection";
+import ScienceSection from "@/components/ScienceSection";
+import PathwaysSection from "@/components/PathwaysSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-[#FCFAF7]">
+    <main className="bg-bg selection:bg-clay/20">
       <Navbar />
       <Hero />
-      <IntroductionTeaser />
-      <TheScience />
-      <BlogPreview />
-      <CoursePortal />
-      <Contact />
+      <StorySection />
+      <ScienceSection />
+      <PathwaysSection />
       <Footer />
     </main>
   );
