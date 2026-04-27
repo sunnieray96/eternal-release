@@ -20,10 +20,21 @@ export default function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-12">
-          <a href="#about" className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/60 hover:text-accent transition-colors">Manifesto</a>
-          <a href="#blog" className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/60 hover:text-accent transition-colors">Journal</a>
-          <a href="#courses" className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/60 hover:text-accent transition-colors">Pathways</a>
-          <a href="#courses" className="px-6 py-2 bg-primary text-white rounded-full text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-sage transition-all">Begin</a>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary/60 hover:text-accent transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="#courses"
+            className="px-6 py-2 bg-primary text-white rounded-full text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-sage transition-all"
+          >
+            Begin
+          </a>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden text-primary">
