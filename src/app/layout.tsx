@@ -3,8 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Eternal Release · Somatic Healing & Yoga",
-  description:
-    "Helping people with CPTSD, BPD, and Bipolar find safety in their bodies through somatic release, fascia work, and nervous system regulation.",
+  description: "Helping people with CPTSD, BPD, and Bipolar find safety in their bodies through somatic release, fascia work, and nervous system regulation.",
 };
 
 export default function RootLayout({

@@ -15,7 +15,7 @@ export default function Hero() {
           Somatic Healing · Fascia Release · Psychology
         </p>
 
-        <h1 className="font-serif text-5xl md:text-8xl font-medium leading-[1.1] mb-12 text-balance">
+        <h1 className="font-serif text-6xl md:text-8xl font-medium leading-[1.1] mb-12 text-balance">
           Your body knows <br />
           <span className="italic font-light text-sage-dark">the way home</span>
         </h1>
