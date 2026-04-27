@@ -1,16 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import StoryTeaser from "@/components/StoryTeaser";
-import TheWork from "@/components/TheWork";
+import IntroductionTeaser from "@/components/IntroductionTeaser";
+import ApproachTeaser from "@/components/ApproachTeaser";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ backgroundColor: '#FCFAF7' }}>
       <Navbar />
       <Hero />
-      <StoryTeaser />
-      <TheWork />
+      <IntroductionTeaser />
+      <ApproachTeaser />
       <Footer />
     </main>
   );

@@ -3,25 +3,25 @@ import Footer from "@/components/Footer";
 
 export default function AboutPage() {
   return (
-    <main className="bg-[#FCFAF7] min-h-screen">
+    <main style={{ backgroundColor: '#FCFAF7', minHeight: '100vh' }}>
       <Navbar />
-      <section className="pt-64 pb-32 editorial-container">
-        <div className="max-w-4xl">
-           <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#1C1C1C]/40 mb-12 uppercase">The Manifesto</p>
-           <h1 className="font-serif text-5xl md:text-[8rem] font-medium leading-[1] mb-24">
+      <section style={{ paddingTop: '12rem', paddingBottom: '8rem', maxWidth: '80rem', margin: '0 auto', paddingLeft: '2rem', paddingRight: '2rem' }}>
+        <div style={{ maxWidth: '64rem' }}>
+           <p style={{ fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.4em', fontWeight: 'bold', color: 'rgba(28, 28, 28, 0.4)', marginBottom: '3rem' }}>The Manifesto</p>
+           <h1 style={{ fontFamily: 'serif', fontSize: 'clamp(3rem, 12vw, 8rem)', fontWeight: 300, lineHeight: 1.1, marginBottom: '6rem', color: '#1C1C1C' }}>
              Beyond the Labels: <br/>
-             <span className="italic font-light text-[#A8613F]">The Science of a Raw Soul</span>
+             <span style={{ fontStyle: 'italic', fontWeight: 200, color: '#A8613F' }}>The Science of a Raw Soul</span>
            </h1>
            
-           <div className="space-y-16 text-xl md:text-3xl font-light text-[#1C1C1C]/80 leading-relaxed">
+           <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 300, color: 'rgba(28, 28, 28, 0.8)', lineHeight: 1.7 }}>
               <p>My name is Sunnie Ray, and yes, it is my birth name. My mother thought she was being clever, but for a long time, it felt like a cruel irony. When your name is &ldquo;Sunnie,&rdquo; the world expects light, but my reality was a shadow. My story began with a primal wound: I was adopted at six months old. Before I had a single word to describe my world, my nervous system had already learned the language of loss and abandonment.</p>
               
               <p>That early imprint was compounded by years of abuse, neglect, and sexual assault that followed. By my early twenties, I was a walking storm, angry, unruly, and struggling with attachment issues so extreme they terrified the professionals. I&apos;ve had therapists quit on me. I&apos;ve been called &ldquo;too much,&rdquo; &ldquo;reactive,&rdquo; and &ldquo;unstable.&rdquo; I was cycled through labels like Bipolar, BPD, and even Autism, diagnoses that tried to explain my symptoms without ever touching the fire that caused them. While labels can be helpful for some, they never helped guide me through the experience. I was stiff, tense, anxious, and reactive.</p>
 
               <p>The light finally flickered when I worked with a psychiatrist whose background in Traditional Chinese Medicine allowed him to see me holistically. He used yoga, sensory deprivation, and art therapy. He was the one who finally looked past the surface and formally diagnosed me with CPTSD. He saw a human being where others saw a &ldquo;case.&rdquo; But even with that brilliance, there was a missing link. We were doing the work, but my body was still bracing.</p>
 
-              <div className="py-24 border-y border-[#D9D2C5]/30 my-32">
-                 <p className="font-serif italic text-[#1C1C1C] text-4xl md:text-6xl text-center leading-tight">
+              <div style={{ padding: '6rem 0', borderTop: '1px solid rgba(217, 210, 197, 0.3)', borderBottom: '1px solid rgba(217, 210, 197, 0.3)', margin: '8rem 0' }}>
+                 <p style={{ fontFamily: 'serif', fontStyle: 'italic', color: '#1C1C1C', fontSize: 'clamp(2rem, 5vw, 4rem)', textAlign: 'center', lineHeight: 1.2 }}>
                     &ldquo;I&apos;d rather be whole than good.&rdquo; — Carl Jung
                  </p>
               </div>
@@ -32,7 +32,7 @@ export default function AboutPage() {
 
               <p>Your fascia is your largest sensory organ and the biological archive of your history. At Eternal Release, we use somatic movement to signal safety to the Vagus nerve, allowing the body to finally drop its guard. We are reclaiming our right to be whole, to be agile, and to finally live in our own skin.</p>
               
-              <div className="pt-12 italic opacity-60 text-base md:text-lg">
+              <div style={{ paddingTop: '3rem', fontStyle: 'italic', opacity: 0.6, fontSize: '1rem' }}>
                  Sunnie Ray is a psychology student and yoga teacher. This platform is an educational sanctuary for somatic exploration.
               </div>
            </div>
