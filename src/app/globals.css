@@ -3,24 +3,44 @@
 @tailwind utilities;
 
 :root {
+  --color-bg: #FCFAF7;
+  --color-ink: #1C1C1C;
+  --color-clay: #A8613F;
+  --color-moss: #3E4A34;
+  --color-sand: #D4C5A9;
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
 }
 
-html { scroll-behavior: smooth; }
-body { background-color: #FCFAF7; color: #1C1C1C; -webkit-font-smoothing: antialiased; background-image: url("https://www.transparenttextures.com/patterns/felt.png"); }
-
-.editorial-container {
-  max-width: 85rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg);
 }
 
-@keyframes reveal {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-.animate-reveal {
-  animation: reveal 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.editorial-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 15vw, 11rem);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.editorial-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 8vw, 7rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Hide scrollbar for cinematic feel */
+::-webkit-scrollbar {
+  display: none;
 }
