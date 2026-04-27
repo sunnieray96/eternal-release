@@ -2,17 +2,17 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TheRealization from "@/components/TheRealization";
 import TheScience from "@/components/TheScience";
-import Pathways from "@/components/Pathways";
+import PathwaysTeaser from "@/components/PathwaysTeaser";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-bg">
+    <main>
       <Navbar />
       <Hero />
       <TheRealization />
       <TheScience />
-      <Pathways />
+      <PathwaysTeaser />
       <Footer />
     </main>
   );

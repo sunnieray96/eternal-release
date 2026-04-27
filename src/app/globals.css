@@ -1,6 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
+:root {
   --color-bg: #FCFAF7;
   --color-ink: #1C1C1C;
   --color-bone: #F2EFE9;
@@ -13,15 +15,35 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--color-bg);
 }
 
 body {
-  background-color: #FCFAF7;
-  color: #1C1C1C;
-  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  background-image: url("https://www.transparenttextures.com/patterns/felt.png");
 }
 
-.text-balance {
-  text-wrap: balance;
+.editorial-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 15vw, 11rem);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+}
+
+.editorial-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.manifesto-text {
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  font-weight: 300;
+  line-height: 1.7;
 }
