@@ -11,20 +11,24 @@
     "next": "15.1.6",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "sanity": "5.43.0",
+    "sanity": "5.15.0",
     "next-sanity": "9.8.31",
-    "styled-components": "6.1.13",
-    "@sanity/icons": "3.5.2",
-    "@sanity/image-url": "1.1.0"
+    "styled-components": "^6.1.13",
+    "@sanity/icons": "^3.5.2",
+    "@sanity/image-url": "^1.0.2"
   },
   "devDependencies": {
-    "typescript": "5.7.3",
-    "@types/node": "20.17.16",
-    "@types/react": "19.0.8",
-    "@types/react-dom": "19.0.3",
-    "tailwindcss": "4.0.0",
-    "@tailwindcss/postcss": "4.0.0",
-    "postcss": "8.5.1",
-    "autoprefixer": "10.4.20"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "postcss": "^8",
+    "autoprefixer": "^10.4.20"
+  },
+  "overrides": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   }
 }
