@@ -26,15 +26,21 @@ export default function Hero() {
         </p>
 
         <div className="max-w-md mx-auto mb-16">
-          <form className="flex flex-col sm:flex-row gap-4 p-2 bg-white/60 backdrop-blur-md border border-sand/20 rounded-full shadow-sm">
+          <form 
+             action="https://formspree.io/f/YOUR_FORM_ID" 
+             method="POST"
+             className="flex flex-col sm:flex-row gap-4 p-2 bg-white/60 backdrop-blur-md border border-sand/20 rounded-full shadow-sm"
+          >
             <input
               type="email"
+              name="email"
+              required
               placeholder="Join the waitlist for the 7-Day Reset..."
               className="flex-1 px-6 py-3 bg-transparent text-primary placeholder:text-secondary/50 outline-none"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button className="px-10 py-3 bg-primary text-white rounded-full text-[10px] uppercase font-bold tracking-widest hover:bg-sage transition-all">
+            <button type="submit" className="px-10 py-3 bg-primary text-white rounded-full text-[10px] uppercase font-bold tracking-widest hover:bg-sage transition-all">
               Join
             </button>
           </form>
