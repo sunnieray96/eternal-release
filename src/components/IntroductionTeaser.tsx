@@ -9,15 +9,15 @@ export default function IntroductionTeaser() {
              <div className="aspect-[4/5] bg-sand/10 rounded-[120px] overflow-hidden border border-sand/20 relative group">
                 <img 
                    src="https://customer-assets.emergentagent.com/wingman/29fab97e-3d97-4ee3-a7c2-df0f13706430/attachments/dbcab09ef71446b09f928c042620df92_pexels-angela-roma-7479889.jpg" 
-                   alt="Story" 
-                   className="w-full h-full object-cover opacity-80 transition-transform duration-[4s] group-hover:scale-105"
+                   alt="Sanctuary"
+                   className="w-full h-full object-cover opacity-80 transition-all duration-[3s] group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#FCFAF7]/30 to-transparent" />
              </div>
           </div>
           
           <div className="md:col-span-6 text-left order-1 md:order-2 md:pl-24">
-             <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-black opacity-30 mb-8">The Story</p>
+             <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-black opacity-30 mb-8 uppercase">The Story</p>
              <h2 className="font-serif text-5xl md:text-8xl font-light leading-tight mb-16">
                Labels are maps, but rarely <span className="italic font-light text-[#A8613F]">the journey itself.</span>
              </h2>
