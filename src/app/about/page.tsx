@@ -3,18 +3,18 @@ import Footer from "@/components/Footer";
 
 export default function AboutPage() {
   return (
-    <main style={{ backgroundColor: '#FCFAF7', minHeight: '100vh' }}>
+    <main className="bg-[#FCFAF7] min-h-screen">
       <Navbar />
-      <section style={{ paddingTop: '16rem', paddingBottom: '12rem', maxWidth: '80rem', margin: '0 auto', paddingLeft: '2rem', paddingRight: '2rem' }}>
-        <div style={{ maxWidth: '64rem' }}>
-           <p style={{ fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.4em', fontWeight: 'bold', color: 'rgba(28, 28, 28, 0.4)', marginBottom: '3rem' }}>The Manifesto</p>
-           <h1 style={{ fontFamily: 'serif', fontSize: 'clamp(3.5rem, 12vw, 9rem)', fontWeight: 300, lineHeight: 0.9, marginBottom: '8rem', color: '#1C1C1C', letterSpacing: '-0.04em' }}>
+      <section className="pt-64 pb-32 max-w-7xl mx-auto px-8 md:px-12">
+        <div className="max-w-4xl">
+           <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#1C1C1C]/40 mb-12 uppercase">The Manifesto</p>
+           <h1 className="editorial-h1 mb-24">
              Beyond the Labels: <br/>
-             <span style={{ fontStyle: 'italic', fontWeight: 200, color: '#A8613F' }}>The Science of a Raw Soul</span>
+             <span className="italic font-light text-[#A8613F]">The Science of a Raw Soul</span>
            </h1>
            
-           <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem', fontSize: 'clamp(1.2rem, 2.2vw, 1.8rem)', fontWeight: 300, color: 'rgba(28, 28, 28, 0.8)', lineHeight: 1.8 }}>
-              <p>Sunnie Ray. A name chosen by a mother who thought they were being clever, but for a long time, it felt like a cruel irony. When your name is &ldquo;Sunnie,&rdquo; the world expects light, but their reality was a shadow. Their story began with a primal wound: they were adopted at six months old. Before they had a single word to describe my world, their nervous system had already learned the language of loss and abandonment.</p>
+           <div className="space-y-16 text-xl md:text-2xl font-light text-[#1C1C1C]/80 leading-relaxed">
+              <p>Sunnie Ray. A name chosen by a mother who thought they were being clever, but for a long time, it felt like a cruel irony. When your name is &ldquo;Sunnie,&rdquo; the world expects light, but their reality was a shadow. Their story began with a primal wound: they were adopted at six months old. Before they had a single word to describe their world, their nervous system had already learned the language of loss and abandonment.</p>
               
               <p>That early imprint was compounded by years of abuse, neglect, and sexual assault that followed. By their early twenties, they were a walking storm, angry, unruly, and struggling with attachment issues so extreme they terrified the professionals. They&apos;ve had therapists quit on me. They&apos;ve been called &ldquo;too much,&rdquo; &ldquo;reactive,&rdquo; and &ldquo;unstable.&rdquo; They were cycled through labels like Bipolar, BPD, and even Autism, diagnoses that tried to explain my symptoms without ever touching the fire that caused them. While labels can be helpful for some, they never helped guide me through the experience. They were stiff, tense, anxious, and reactive.</p>
 
