@@ -38,7 +38,7 @@ export default async function BlogPreview() {
 
         {!hasPosts ? (
           <div className="grid md:grid-cols-2 gap-20">
-             <div className="space-y-12 opacity-40">
+             <div className="opacity-40">
                 <div className="aspect-[4/5] bg-cream-dark/30 wabi-border flex items-center justify-center p-20 text-center">
                    <div>
                       <p className="font-serif text-2xl text-slate-dark mb-4 italic">The Biology of Fear</p>
