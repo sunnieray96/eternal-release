@@ -1,20 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import IntroductionTeaser from "@/components/IntroductionTeaser";
-import TheScience from "@/components/TheScience";
-import CoursePortal from "@/components/CoursePortal";
+import PinnedStorytelling from "@/components/PinnedStorytelling";
 import BlogPreview from "@/components/BlogPreview";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-[#FCFAF7] selection:bg-clay/20">
+    <main className="bg-[#FCFAF7] selection:bg-clay/10">
       <Navbar />
       <Hero />
-      <IntroductionTeaser />
-      <TheScience />
-      <CoursePortal />
+      <PinnedStorytelling />
       <BlogPreview />
       <Contact />
       <Footer />
