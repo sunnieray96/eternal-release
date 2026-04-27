@@ -1,108 +1,39 @@
 import { client } from "@/sanity/lib/client";
-import { FEATURED_POST_QUERY, RECENT_POSTS_QUERY } from "@/sanity/lib/queries";
+import { RECENT_POSTS_QUERY } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 
-interface Post {
-  _id: string;
-  title: string;
-  slug: string;
-  mainImage?: { asset: { _ref: string } };
-  publishedAt?: string;
-  category?: string;
-  excerpt?: string;
-}
-
-async function getFeaturedPost(): Promise<Post | null> {
-  try {
-    if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) return null;
-    return await client.fetch(FEATURED_POST_QUERY);
-  } catch {
-    return null;
-  }
-}
-
-async function getRecentPosts(): Promise<Post[]> {
-  try {
-    if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) return [];
-    return await client.fetch(RECENT_POSTS_QUERY);
-  } catch {
-    return [];
-  }
-}
-
 export default async function BlogPreview() {
-  const recentPosts = await getRecentPosts();
-  const hasPosts = recentPosts && recentPosts.length > 0;
-
-  const CATEGORY_LABELS: Record<string, string> = {
-    "fascia-somatics": "Fascia & Somatics",
-    somatics: "Somatics",
-    psychology: "Psychology",
-    "nervous-system": "Nervous System",
-    healing: "Healing",
-  };
+  const posts = await client.fetch(RECENT_POSTS_QUERY).catch(() => []);
 
   return (
-    <section id="blog" className="py-32 md:py-56 bg-white relative">
-       <div className="absolute top-[20%] left-[-10%] w-[60vw] h-[60vw] bg-sand/5 rounded-full blur-[100px]" />
-       
-      <div className="max-w-6xl mx-auto px-6 relative">
-        <div className="flex flex-col md:flex-row items-baseline justify-between mb-32 border-b border-sand/30 pb-10">
+    <section id="blog" className="py-32 md:py-48 bg-white">
+      <div className="editorial-container">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8 border-b border-sand pb-10">
           <div>
-            <p className="text-terracotta font-medium text-xs tracking-[0.3em] uppercase mb-4">
-              Journal
-            </p>
-            <h2 className="font-serif text-5xl md:text-7xl font-medium text-slate-dark">
-              From the Blog
-            </h2>
+             <p className="text-terracotta text-[10px] uppercase tracking-[0.4em] font-bold mb-4">The Journal</p>
+             <h2 className="text-5xl md:text-8xl font-medium">Stories & Science</h2>
           </div>
-          <a
-            href="/studio"
-            className="mt-8 md:mt-0 text-[10px] font-bold uppercase tracking-[0.3em] text-sage-dark hover:text-terracotta transition-colors flex items-center gap-3"
-          >
-            Dashboard <span>&rarr;</span>
-          </a>
+          <a href="/studio" className="text-[10px] uppercase font-bold tracking-[0.2em] text-primary/60 hover:text-accent">Manage Journal &rarr;</a>
         </div>
 
-        {!hasPosts ? (
+        {posts.length === 0 ? (
           <div className="grid md:grid-cols-2 gap-20">
-             <div className="space-y-12 opacity-40">
-                <div className="aspect-[4/5] bg-cream-dark/30 rounded-[40px] border border-sand/20 flex items-center justify-center p-20 text-center">
-                   <div>
-                      <p className="font-serif text-2xl text-slate-dark mb-4 italic">The Biology of Fear</p>
-                      <p className="text-xs uppercase tracking-widest text-stone">Coming Soon</p>
-                   </div>
+             <div className="opacity-50">
+                <div className="aspect-[3/4] bg-cream-dark/20 wabi-border flex items-center justify-center mb-10">
+                   <p className="font-serif italic text-secondary/30 text-xl">The Biology of Fear</p>
                 </div>
-                <div className="space-y-4">
-                   <p className="text-terracotta text-[10px] uppercase tracking-widest font-bold">Fascia & Somatics</p>
-                   <h3 className="font-serif text-4xl text-slate-dark leading-tight italic">Why your body still thinks it is in danger.</h3>
-                </div>
+                <p className="text-[10px] uppercase tracking-widest font-bold mb-4 text-terracotta">Fascia & Somatics</p>
+                <h3 className="text-3xl font-serif italic mb-4">The Body’s Living Archive</h3>
              </div>
-             <div className="flex flex-col justify-center bg-cream/20 p-16 rounded-[40px] border border-sand/10">
-                <p className="font-serif text-3xl text-slate-dark/60 leading-relaxed italic mb-10">
-                   Your journal is currently a sanctuary of silence. 🕊️
-                </p>
-                <p className="text-stone font-light leading-relaxed mb-10">
-                   Log in to your Sanity Studio to share your first deep-dive into the intersection of science and soul.
-                </p>
-                <a href="/studio" className="px-10 py-4 bg-slate-dark text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-sage transition-all w-fit shadow-lg">
-                   Publish First Post
-                </a>
+             <div className="flex flex-col justify-center">
+                <p className="font-serif text-3xl italic text-primary/60 leading-relaxed mb-10">Your journal is currently silent. 🕊️</p>
+                <p className="text-secondary font-light text-lg mb-12 leading-relaxed">Log in to publish your first deep-dive into the intersection of science and soul.</p>
+                <a href="/studio" className="w-fit px-10 py-4 bg-primary text-white rounded-full text-[10px] uppercase font-bold tracking-widest hover:bg-sage shadow-lg transition-all">Publish Story</a>
              </div>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 gap-16">
-            {recentPosts.map((post) => (
-               <article key={post._id} className="group">
-                  <div className="aspect-[4/5] overflow-hidden rounded-[40px] mb-8 bg-cream/30">
-                     {post.mainImage && (
-                        <img src={urlFor(post.mainImage).url()} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                     )}
-                  </div>
-                  <p className="text-terracotta text-[10px] uppercase tracking-widest font-bold mb-4">{CATEGORY_LABELS[post.category || ""] || "Journal"}</p>
-                  <h3 className="font-serif text-4xl text-slate-dark leading-tight italic group-hover:text-sage-dark transition-colors">{post.title}</h3>
-               </article>
-            ))}
+          <div className="grid md:grid-cols-2 gap-20">
+             {/* Map posts */}
           </div>
         )}
       </div>
