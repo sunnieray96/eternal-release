@@ -14,8 +14,8 @@ module.exports = {
         sand: "#D4C5A9",
       },
       fontFamily: {
-        serif: ["Playfair Display", "serif"],
-        sans: ["Inter", "sans-serif"],
+        serif: ['var(--font-serif)', 'serif'],
+        sans: ['var(--font-sans)', 'sans-serif'],
       },
     },
   },
