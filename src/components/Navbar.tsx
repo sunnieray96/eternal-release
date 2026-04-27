@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "About", href: "/about" },
-  { label: "The Work", href: "/#about-teaser" },
+  { label: "Manifesto", href: "/about" },
+  { label: "Journal", href: "/#blog" },
+  { label: "Pathways", href: "/#courses" },
   { label: "Connect", href: "/#contact" },
 ];
 
@@ -20,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-      scrolled ? "py-4 bg-white/90 backdrop-blur-md border-b border-gray-200" : "py-10 bg-transparent"
+      scrolled ? "py-4 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm" : "py-10 bg-transparent"
     }`}>
       <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
         <Link href="/" className="font-serif text-2xl tracking-tighter text-black no-underline">
@@ -31,6 +32,9 @@ export default function Navbar() {
           {navLinks.map(link => (
             <Link key={link.label} href={link.href} className="text-[10px] uppercase tracking-[0.4em] font-bold text-black/60 hover:text-[#A8613F] transition-colors no-underline">{link.label}</Link>
           ))}
+          <Link href="/#courses" className="px-6 py-2 bg-black text-white rounded-full text-[9px] uppercase tracking-[0.2em] font-bold hover:bg-[#3E4A34] transition-all no-underline shadow-md">
+             Begin
+          </Link>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden text-black focus:outline-none">

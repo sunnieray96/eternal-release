@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 
 export default function AboutPage() {
   return (
-    <main className="bg-[#FCFAF7] min-h-screen font-sans">
+    <main className="bg-[#FCFAF7] min-h-screen font-sans text-left">
       <Navbar />
       <section className="pt-64 pb-32 max-w-7xl mx-auto px-8 md:px-12">
         <div className="max-w-4xl">
@@ -20,17 +20,21 @@ export default function AboutPage() {
 
               <p>The light finally flickered when I worked with a psychiatrist whose background in Traditional Chinese Medicine allowed him to see me holistically. He used yoga, sensory deprivation, and art therapy. He was the one who finally looked past the surface and formally diagnosed me with CPTSD. He saw a human being where others saw a &ldquo;case.&rdquo; But even with that brilliance, there was a missing link. We were doing the work, but my body was still bracing.</p>
 
-              <div className="py-24 border-y border-[#D9D2C5]/30 my-32">
-                 <p className="font-serif italic text-black text-4xl md:text-6xl text-center leading-tight">
+              <div className="py-24 border-y border-[#D9D2C5]/30 my-32 text-center">
+                 <p className="font-serif italic text-black text-4xl md:text-6xl leading-tight">
                     &ldquo;I&apos;d rather be whole than good.&rdquo; — Carl Jung
                  </p>
               </div>
 
-              <p>I quickly learned that for many of us with CPTSD and BPD, traditional talk therapy can be a trap. Science shows that when we recount trauma, the brain cannot always differentiate between a memory and a current threat. Research shows that during trauma recall, the amygdala fires while the speech center often shuts down. We are literally forced to try and &ldquo;talk&rdquo; our way out of a state where the brain has disabled speech. For many, this doesn&apos;t resolve the symptoms; it retraumatizes.</p>
+              <p>I quickly learned that for many of us with CPTSD and BPD, traditional talk therapy can be a trap. Science shows that when we recount trauma, the brain cannot always differentiate between a memory and a current threat. Research using fMRI scans, discussed by Dr. Bessel van der Kolk in <em className="text-black underline">The Body Keeps the Score</em>, shows that during trauma recall, the amygdala fires while the speech center (Broca&apos;s area) often shuts down. We are literally forced to try and &ldquo;talk&rdquo; our way out of a state where the brain has disabled speech. For many, this doesn&apos;t resolve symptoms; it retraumatizes.</p>
 
-              <p>I practiced yoga to get out of my mind and into my body, but because I was stuck in a chronic &ldquo;fight-or-flight&rdquo; loop, I was making my stiffness and posture worse. I didn&apos;t realize I was &ldquo;bracing&rdquo; into the poses, reinforcing the fascia-armor my body had built to survive. I was trying to force peace onto a system that didn&apos;t yet feel safe.</p>
+              <p>I practiced yoga to get out of my mind and into my body, but because I was stuck in a chronic &ldquo;fight-or-flight&rdquo; loop, I was making my stiffness and posture worse. I didn&apos;t realize I was &ldquo;bracing&rdquo; into the poses, reinforcing the fascia-armor my body had built to survive childhood abuse. I was trying to force peace onto a system that didn&apos;t yet feel safe.</p>
 
-              <p>Your fascia is your largest sensory organ and the biological archive of your history. At Eternal Release, we use somatic movement to signal safety to the Vagus nerve, allowing the body to finally drop its guard. We are reclaiming our right to be whole, to be agile, and to finally live in our own skin.</p>
+              <p>Your fascia is your largest sensory organ and the biological archive of your history. When you are traumatized, your fascia physically tightens to create a &ldquo;shield&rdquo; for your nervous system. At Eternal Release, we use somatic movement to signal safety to the Vagus nerve, allowing the body to finally drop its guard and hydrate the &ldquo;stuck&rdquo; tissue.</p>
+
+              <p className="font-medium text-black">
+                Healing isn&apos;t about becoming a &ldquo;perfect&rdquo; version of yourself. It&apos;s about building a body that is resilient enough to hold the full spectrum of human emotion. I truly believe that a flexible, agile body is the gateway to a resilient mind. We are reclaiming our right to be whole, to be agile, and to finally live in our own skin.
+              </p>
               
               <div className="pt-12 italic opacity-60 text-base md:text-lg">
                  Sunnie Ray is a psychology student and yoga teacher. This platform is an educational sanctuary for somatic exploration.
