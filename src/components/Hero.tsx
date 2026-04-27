@@ -1,16 +1,19 @@
-"use client";
-
-import { useState } from "react";
-
 export default function Hero() {
-  const [email, setEmail] = useState("");
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[#FCFAF7]">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://customer-assets.emergentagent.com/wingman/29fab97e-3d97-4ee3-a7c2-df0f13706430/attachments/dbcab09ef71446b09f928c042620df92_pexels-angela-roma-7479889.jpg" 
+          alt="Sanctuary Background" 
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FCFAF7]/40 via-[#FCFAF7]/20 to-[#FCFAF7]" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-8 relative z-10 text-center">
         <p className="text-[10px] uppercase tracking-[0.6em] font-bold text-black opacity-30 mb-12 animate-reveal">Somatic Release · Fascia Work · Psychology</p>
         
-        <h1 className="text-6xl md:text-[11rem] font-serif font-light leading-[0.85] tracking-tighter mb-20 animate-reveal" style={{ animationDelay: "0.2s" }}>
+        <h1 className="text-6xl md:text-[11rem] font-serif font-light leading-[0.85] tracking-tighter mb-20 animate-reveal">
           Your body knows<br />
           <span className="italic font-extralight text-[#3E4A34] opacity-30">the way home</span>
         </h1>
@@ -20,24 +23,6 @@ export default function Hero() {
              A gentle, evidence-based return to wholeness for complex minds. 
              Uncage your nervous system, one breath at a time.
            </p>
-           <form 
-             action="https://formspree.io/f/YOUR_FORM_ID" 
-             method="POST"
-             className="flex flex-col sm:flex-row gap-3 mb-8"
-           >
-             <input
-               type="email"
-               name="email"
-               required
-               placeholder="Join the waitlist..."
-               className="flex-1 px-6 py-4 rounded-full bg-white/40 backdrop-blur-md border border-sand/30 focus:outline-none focus:border-moss text-ink placeholder:text-ink/40"
-               value={email}
-               onChange={(e) => setEmail(e.target.value)}
-             />
-             <button type="submit" className="px-10 py-4 bg-ink text-white rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-moss transition-all shadow-md">
-               Join
-             </button>
-           </form>
            <a href="#story" className="text-[11px] font-bold uppercase tracking-[0.6em] border-b border-black opacity-20 pb-4 hover:opacity-100 transition-all no-underline text-black">Enter the Sanctuary &darr;</a>
         </div>
       </div>

@@ -8,27 +8,16 @@ export default function TheScience() {
              <h2 className="font-serif text-5xl md:text-[9rem] font-light leading-tight text-black tracking-tighter">
                 Your fascia is a <br/><span className="italic font-light text-[#3E4A34]">living archive.</span>
              </h2>
-             <p className="text-2xl md:text-4xl font-light text-black/60 leading-relaxed max-w-lg">
+             <p className="text-2xl md:text-3xl font-light text-black/60 leading-relaxed max-w-lg">
                Science confirms that trauma isn&apos;t just a thought. It is a physical bracing in your connective tissue. We use somatic movement to signal safety directly to your Vagus nerve, allowing the body to finally drop its guard.
              </p>
-             
-             <div className="pt-12 border-t border-black/5 flex gap-16">
-                <div className="flex flex-col gap-2">
-                   <span className="text-clay font-bold text-[10px] uppercase tracking-[0.2em]">fMRI Validated</span>
-                   <p className="text-xs font-serif italic opacity-40">Nervous System Mapping</p>
-                </div>
-                <div className="flex flex-col gap-2">
-                   <span className="text-[#3E4A34] font-bold text-[10px] uppercase tracking-[0.2em]">Vagus Activation</span>
-                   <p className="text-xs font-serif italic opacity-40">Biological Safety Loop</p>
-                </div>
-             </div>
           </div>
           
           <div className="flex-1">
              <div className="aspect-[3/4] bg-sand/10 rounded-[100px] border border-sand/20 overflow-hidden relative group">
                 <img 
                   src="https://customer-assets.emergentagent.com/wingman/29fab97e-3d97-4ee3-a7c2-df0f13706430/attachments/cf32f8b8961541939f851db417ec776a_pexels-daria-liudnaya-8187528.jpg" 
-                  alt="Anatomy"
+                  alt="Fascia Architecture"
                   className="w-full h-full object-cover opacity-60 grayscale transition-all duration-[3s] group-hover:grayscale-0 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 flex items-center justify-center p-24 pointer-events-none opacity-20 group-hover:opacity-40 transition-opacity">

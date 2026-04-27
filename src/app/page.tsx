@@ -2,8 +2,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import IntroductionTeaser from "@/components/IntroductionTeaser";
 import TheScience from "@/components/TheScience";
-import CoursePortal from "@/components/CoursePortal";
 import BlogPreview from "@/components/BlogPreview";
+import CoursePortal from "@/components/CoursePortal";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,8 +14,9 @@ export default function Home() {
       <Hero />
       <IntroductionTeaser />
       <TheScience />
-      <CoursePortal />
       <BlogPreview />
+      <CoursePortal />
+      <Contact />
       <Footer />
     </main>
   );
