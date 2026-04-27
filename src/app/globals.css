@@ -1,23 +1,13 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-bg: #FCFAF7;
-  --color-ink: #1C1C1C;
-  --color-bone: #F2EFE9;
-  --color-clay: #A8613F;
-  --color-moss: #3E4A34;
-  --color-sand: #D4C5A9;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-ink);
+  background-color: #FCFAF7 !important;
+  color: #1C1C1C !important;
   font-family: sans-serif;
   background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+  -webkit-font-smoothing: antialiased;
 }
 
 .editorial-h1 {

@@ -14,14 +14,14 @@ export default function Hero() {
              A gentle, evidence-based return to wholeness for complex minds. 
              Uncage your nervous system.
            </p>
-           <a href="#about-teaser" className="text-[11px] font-bold uppercase tracking-[0.6em] border-b border-black/10 pb-4 hover:border-black transition-all">
+           <a href="#about-teaser" className="text-[11px] font-bold uppercase tracking-[0.6em] border-b border-black/10 pb-4 hover:border-black transition-all no-underline text-black">
              Enter the Sanctuary &darr;
            </a>
         </div>
       </div>
 
-      <div className="absolute top-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-[#3E4A34]/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-[-20%] left-[-10%] w-[70vw] h-[70vw] bg-[#A8613F]/5 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute top-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-[#3E4A34]/5 rounded-full blur-[150px] pointer-events-none opacity-50" />
+      <div className="absolute bottom-[-20%] left-[-10%] w-[70vw] h-[70vw] bg-[#A8613F]/5 rounded-full blur-[180px] pointer-events-none opacity-50" />
     </section>
   );
 }
