@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
+@theme {
   --color-bg: #FCFAF7;
   --color-ink: #1C1C1C;
   --color-bone: #F2EFE9;
@@ -15,64 +13,15 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--color-bg);
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
+  background-color: #FCFAF7;
+  color: #1C1C1C;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
-/* High-End Editorial Type */
-.editorial-h1 {
-  font-family: var(--font-serif);
-  @apply text-6xl md:text-[10rem] font-light leading-[0.9] tracking-tighter;
-}
-
-.editorial-h2 {
-  font-family: var(--font-serif);
-  @apply text-4xl md:text-7xl font-light leading-[1.1] tracking-tight;
-}
-
-.editorial-h3 {
-  font-family: var(--font-serif);
-  @apply text-2xl md:text-4xl italic font-light;
-}
-
-.manifesto-body {
-  @apply text-xl md:text-3xl font-light leading-relaxed max-w-4xl mx-auto;
-}
-
-.caption {
-  @apply text-[10px] uppercase tracking-[0.4em] font-bold text-ink/40;
-}
-
-/* Spacing & Layout */
-.section-padding {
-  @apply py-32 md:py-64;
-}
-
-.canvas-container {
-  @apply max-w-7xl mx-auto px-8 md:px-16;
-}
-
-/* Organic Elements */
-.organic-shape {
-  @apply pointer-events-none absolute blur-[120px] opacity-20;
-}
-
-.wabi-sabi-divider {
-  @apply w-full h-px bg-sand/40 my-16;
-}
-
-@keyframes reveal {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-reveal {
-  animation: reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.text-balance {
+  text-wrap: balance;
 }
