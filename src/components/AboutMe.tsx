@@ -23,7 +23,6 @@ export default async function AboutMe() {
 
   return (
     <section id="about" className="py-32 md:py-56 bg-cream/40 relative">
-       {/* Texture Layer */}
       <div className="absolute inset-0 opacity-[0.04] pointer-events-none" 
            style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/handmade-paper.png")' }} />
            
@@ -51,7 +50,6 @@ export default async function AboutMe() {
               <FallbackContent />
             )}
             
-            {/* Signature Area */}
             <div className="pt-20 opacity-30">
                <svg width="150" height="60" viewBox="0 0 150 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10 30C30 10 70 10 90 30C110 50 140 50 140 30" stroke="currentColor" strokeWidth="1.5" />
@@ -73,27 +71,22 @@ function FallbackContent() {
         is &ldquo;Sunnie,&rdquo; the world expects you to be a constant source of light,
         but my reality was a shadow. 
       </p>
-
       <p>
         My story began with a primal wound: I was adopted at six months old. Before I 
         had a single word to describe my world, my nervous system had already learned 
         the language of loss and abandonment.
       </p>
-
       <p className="italic font-medium text-slate-dark border-l-2 border-sage/40 pl-10 my-16">
         &ldquo;I&apos;d rather be whole than good.&rdquo; — Carl Jung
       </p>
-
       <p>
         Talk therapy often failed me because the brain cannot always differentiate 
         between a memory and a current threat. For many, this doesn&apos;t heal; it retraumatizes.
       </p>
-
       <p>
         As a psychology student and yoga teacher, I found the bridge in Somatic Release
         and Fascia. We move beyond bypassing and back into the natural flow of the body.
       </p>
-
       <p className="text-slate-dark font-medium leading-[1.6] pt-10">
         We are reclaiming our right to be whole, to be agile, and to
         finally live in our own skin.
