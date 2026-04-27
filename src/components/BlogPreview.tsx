@@ -341,6 +341,22 @@ function FallbackFeaturedPost() {
           </p>
         </div>
       </div>
+    </article>function FallbackPostCard({ post }: { post: any }) {
+  return (
+    <article className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+      <p className="text-xs uppercase tracking-[0.2em] text-green-700 mb-3">
+        {post.category || "Journal"}
+      </p>
+
+      <h3 className="font-serif text-2xl text-stone-900 mb-3">
+        {post.title}
+      </h3>
+
+      <p className="text-stone-700 leading-7">
+        {post.excerpt}
+      </p>
     </article>
+  );
+}
   );
 }
