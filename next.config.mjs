@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
@@ -8,6 +9,10 @@ const nextConfig = {
       },
     ],
   },
+  // Disabling Turbopack for build stability
+  experimental: {
+     turbo: false
+  }
 };
 
 export default nextConfig;
