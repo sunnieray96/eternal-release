@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar";
-import ImmersiveSanctuary from "@/components/ImmersiveSanctuary";
+import StorySequence from "@/components/StorySequence";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-bg selection:bg-clay/20">
+    <main className="bg-[#FCFAF7]">
       <Navbar />
-      <ImmersiveSanctuary />
+      <StorySequence />
       <Footer />
     </main>
   );
